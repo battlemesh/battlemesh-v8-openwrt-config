@@ -37,39 +37,18 @@ config interface
 config interface                                                               
         option 'ifname' 'eth0.2'
 
-#config interface
-#	option 'ignore' 'true'
-#	option 'ifname' 'tun-example'
-
-# A config interface without "option ifname" will set default options
-# for all interfaces.  Interface-specific configuration always overrides
-# default configuration.
 config interface
 	option 'enable_timestamps' 'true'
-	# option 'update_interval' '30'
 
-
-# A filter consists of a type ('in', 'out' or 'redistribute'), an action
-# ('allow', 'deny' or 'metric xxx') and a set of selectors ('ip', 'eq',
-# etc.).  See babeld man page ("Filtering rules") for more details.
-# Here is a sample filter wich redistributes the default route if its
-# protocol number is "boot", e.g. when it installed by dhcp.  It is
-# disabled by default.
 config filter
 	option 'ignore'	'true'
-	# Type
 	option 'type'	'redistribute'
-	# Selectors: ip, eq, le, ge, src_ip, src_eq, src_le, src_ge, neigh, id,
-	# proto, local, if.
 	option 'ip'	'0.0.0.0/0'
 	option 'eq'	'0'
 	option 'proto'	'3'
-	# Action (one of: allow, deny, metric XXX, src-prefix XXX).
 	option 'action'	'metric 128'
 
-# Notice that the 'local' selector is a boolean.
 config filter
 	option 'ignore'	'true'
 	option 'type'	'redistribute'
 	option 'local'	'true'
-	# No action means "allow"
