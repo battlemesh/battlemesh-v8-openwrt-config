@@ -1,0 +1,24 @@
+config global
+        option 'pidfile'        '/var/run/olsrd2.pid'
+        option 'lockfile'        '/var/lock/olsrd2'
+
+config log
+        option 'syslog'                'true'
+        option 'stderr'                'true'
+#        option 'file'                '/var/log/olsrd2.log'
+#        option 'info'                'all'
+#        option 'debug'                'all'
+
+config olsrv2
+#        list 'originator'        '172.17.16.0/21'
+#        list 'originator'        'fd00::/8'
+#        list 'originator'        'default_reject'
+
+config interface
+        list         'ifname'        'wlan0'
+        list         'ifname'        'wlan1'
+
+config interface
+        list         'ifname'        'wan'
+        list        'ifname'        'lan'
+        option        'rx_bitrate'        '100M'
