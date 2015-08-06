@@ -20,12 +20,8 @@ config interface
 	option 'enable_timestamps' 'true'
 
 config filter
-	option 'ignore'	'true'
-	option 'type'	'redistribute'
-	option 'ip'	'0.0.0.0/0'
-	option 'eq'	'0'
-	option 'proto'	'3'
-	option 'action'	'metric 128'
+        option 'type'   'redistribute'
+        option 'action' 'allow'
 
 config filter
 	option 'ignore'	'true'
