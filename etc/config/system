@@ -1,5 +1,5 @@
 config system
-	option hostname 'RouterB'
+	option hostname 'Router<INSERT-LETTER-HERE>'
 	option timezone 'UTC'
 
 config timeserver 'ntp'
