@@ -1,29 +1,8 @@
 package babeld
 
-# Babeld reads options from the following files (the last one takes precedence
-# if an option is defined in several places):
-# - the file defined by the option conf_file (default: /etc/babeld.conf),
-# - *.conf files in the directory defined by conf_dir (default: /tmp/babel.d/),
-# - this UCI configuration file.
-
-# See "man babeld" for all available options ("Global options").
-# Important: remember to use '_' instead of '-' in option names.
 config general
-	# option 'random_id' 'true'
-	# option 'debug' '1'
-	# option 'local_port' '33123'
 	option 'log_file' '/var/log/babeld.log'
-	## Enable ipv6-subtrees by default since OpenWrt should ship with a
-	## recent enough kernel for it to work.
 	option 'ipv6_subtrees' 'true'
-	## This seems somewhat buggy on BB.  If you need only one
-	## import-table statement, "option import_table 42" should work.
-	# list 'import_table' '42'
-	# list 'import_table' '100'
-	## Alternative configuration file and directory.
-	## See comment at the top of this file for more details.
-	# option 'conf_file' '/etc/babeld.conf'
-	# option 'conf_dir' '/tmp/babel.d/'
 
 config interface
 	option 'ifname' 'wlan0'
