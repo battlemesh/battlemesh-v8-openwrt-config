@@ -10,13 +10,13 @@ config wifi-iface
 	option network  wlan0
         option ifname   wlan0
 	option mode     adhoc
-	option ssid     babel2
+	option ssid     wbm8-test-2
 	option bssid    02:b8:c0:00:00:00
 	option encryption none
 
 config wifi-device  radio1
 	option type     mac80211
-	option channel  36
+	option channel  64
 	option hwmode	11a
 	option path	'pci0000:00/0000:00:00.0'
 	option htmode	HT20
@@ -26,7 +26,7 @@ config wifi-iface
 	option network  wlan1
         option ifname   wlan1
 	option mode     adhoc
-	option ssid     babel5
+	option ssid     wbm8-test-5
 	option bssid    02:b8:c0:00:00:00
 	option encryption none
 
