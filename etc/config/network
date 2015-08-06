@@ -20,21 +20,21 @@ config interface 'wan'
         option proto 'static'           
         option ipaddr '172.17.9.1'      
         option netmask '255.255.255.255'
-        option ip6assign '64' 
+        #option ip6assign '64' 
 
 config interface 'wlan0'
         option ifname 'wlan0'
         option proto 'static'
         option ipaddr '172.17.10.1'
         option netmask '255.255.255.255'
-        option ip6assign '64'
+        #option ip6assign '64'
 
 config interface 'wlan1'              
         option ifname 'wlan1'         
         option proto 'static'         
         option ipaddr '172.17.11.1'   
         option netmask '255.255.255.255'
-        option ip6assign '64'
+        #option ip6assign '64'
 
 # --- device specific config here (eg: switch) --- #
 
