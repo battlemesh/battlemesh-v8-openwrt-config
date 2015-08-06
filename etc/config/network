@@ -4,37 +4,34 @@ config interface 'loopback'
         option ipaddr '127.0.0.1'
         option netmask '255.0.0.0'
 
-config globals 'globals'
-        option ula_prefix 'fd94:ae62:0c9b::/48'
-
 config interface 'lan'
         option ifname 'eth0.1'
         option force_link '1'
         option proto 'static'
         option ipaddr '172.17.<n>.1'
         option netmask '255.255.255.0'
-        option ip6assign '64'
+        option ip6addr 'fd87::<router_number>/128'
 
 config interface 'wan'                  
         option ifname 'eth0.2'          
         option proto 'static'           
         option ipaddr '172.17.<n>.1'      
         option netmask '255.255.255.255'
-        #option ip6assign '64' 
+        option ip6addr 'fd87::<router_number>/128'
 
 config interface 'wlan0'
         option ifname 'wlan0'
         option proto 'static'
         option ipaddr '172.17.<n>.1'
         option netmask '255.255.255.255'
-        #option ip6assign '64'
+        option ip6addr 'fd87::<router_number>/128'
 
 config interface 'wlan1'              
         option ifname 'wlan1'         
         option proto 'static'         
         option ipaddr '172.17.<n>.1'   
         option netmask '255.255.255.255'
-        #option ip6assign '64'
+        option ip6addr 'fd87::<router_number>/128'
 
 # --- device specific config here (eg: switch) --- #
 
