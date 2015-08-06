@@ -27,11 +27,27 @@ config interface 'wlan0'
         option ip6addr 'fd87::<router_number>/128'
 
 config interface 'wlan1'              
-        option ifname 'wlan1'         
-        option proto 'static'         
-        option ipaddr '172.17.<n>.1'   
+        option ifname 'wlan1'
+        option proto 'static'
+        option ipaddr '172.17.<n>.1'
         option netmask '255.255.255.255'
         option ip6addr 'fd87::<router_number>/128'
+
+# --- batman only --- #
+
+#config interface 'wlan0'
+#        option mtu '1532'
+#        option proto 'batadv'
+#        option mesh 'bat0'
+                                                    
+#config interface 'wlan1'
+#        option mtu '1532'
+#        option proto 'batadv'
+#        option mesh 'bat0'
+
+#config interface 'bat0'
+#       option ifname 'bat0'
+#        option proto 'static'
 
 # --- device specific config here (eg: switch) --- #
 
