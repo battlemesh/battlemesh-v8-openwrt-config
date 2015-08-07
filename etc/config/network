@@ -33,6 +33,13 @@ config interface 'wlan1'
         option netmask '255.255.255.255'
         option ip6addr 'fd87::<router_number>/128'
 
+# --- static route on nodes that are connected to laptops --- #
+
+#config 'route' 'laptop<n>'
+#       option 'interface' 'lan'
+#       option 'target' '10.0.<n>.2'
+#       option 'netmask' '255.255.255.255'
+
 # --- batman only --- #
 
 #config interface 'wlan0'
