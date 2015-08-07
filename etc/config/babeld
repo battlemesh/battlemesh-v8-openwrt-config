@@ -1,29 +1,29 @@
 package babeld
 
 config general
-	option 'log_file' '/var/log/babeld.log'
-	option 'ipv6_subtrees' 'true'
+    option 'log_file' '/var/log/babeld.log'
+    option 'ipv6_subtrees' 'true'
 
 config interface
-	option 'ifname' 'wlan0'
+    option 'ifname' 'wlan0'
 
-config interface                                                               
+config interface
         option 'ifname' 'wlan1'
 
-config interface                                                               
+config interface
         option 'ifname' 'eth0.1'
 
-config interface                                                               
+config interface
         option 'ifname' 'eth0.2'
 
 config interface
-	option 'enable_timestamps' 'true'
+    option 'enable_timestamps' 'true'
 
 config filter
         option 'type'   'redistribute'
         option 'action' 'allow'
 
 config filter
-	option 'ignore'	'true'
-	option 'type'	'redistribute'
-	option 'local'	'true'
+    option 'ignore'    'true'
+    option 'type'    'redistribute'
+    option 'local'    'true'
