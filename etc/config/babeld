@@ -3,6 +3,7 @@ package babeld
 config general
     option 'log_file' '/var/log/babeld.log'
     option 'ipv6_subtrees' 'true'
+    option 'diversity' '3'
 
 config interface
     option 'ifname' 'wlan0'
