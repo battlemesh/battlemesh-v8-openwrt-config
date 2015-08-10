@@ -9,22 +9,22 @@ config interface
     option 'ifname' 'wlan0'
 
 config interface
-        option 'ifname' 'wlan1'
+    option 'ifname' 'wlan1'
 
 config interface
-        option 'ifname' 'eth0.1'
+    option 'ifname' 'eth0.1'
 
 config interface
-        option 'ifname' 'eth0.2'
+    option 'ifname' 'eth0.2'
 
 config interface
     option 'enable_timestamps' 'true'
 
 config filter
-        option 'type'   'redistribute'
-        option 'action' 'allow'
+    option 'type' 'redistribute'
+    option 'action' 'allow'
 
 config filter
-    option 'ignore'    'true'
-    option 'type'    'redistribute'
-    option 'local'    'true'
+    option 'ignore' 'true'
+    option 'type' 'redistribute'
+    option 'local' 'true'
